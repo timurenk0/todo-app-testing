@@ -32,7 +32,7 @@ This project includes both **unit tests** and **frontend tests** using **Jest** 
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/your-username/todo-app.git
+git clone https://github.com/timurenk0/todo-app-testing.git
 cd todo-app
 ```
 2. **Install dependencies:**
