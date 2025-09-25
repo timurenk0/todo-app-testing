@@ -1,0 +1,180 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.todo-input input,
+.todo-input select {
+    flex: 1 1 150px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.todo-input button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.todo-input button:hover {
+    background-color: #218838;
+}
+
+.task-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.task-controls input,
+.task-controls select {
+    flex: 1 1 120px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-actions {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.task-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-actions button.delete {
+    color: #dc3545;
+}
+
+.task-actions button.complete {
+    color: #28a745;
+}
+
+.task-actions button.edit {
+    color: #007bff;
+}
+
+/* Priority-based task colors */
+#taskList li.priority-High {
+    border-left: 5px solid #dc3545; /* Red for High */
+    background-color: #ffe5e5;
+}
+
+#taskList li.priority-Medium {
+    border-left: 5px solid #ffc107; /* Yellow for Medium */
+    background-color: #fff8e5;
+}
+
+#taskList li.priority-Low {
+    border-left: 5px solid #28a745; /* Green for Low */
+    background-color: #e5ffe5;
+}
+
+/* When task is completed, slightly dim color */
+#taskList li.completed.priority-High {
+    background-color: #f8d7da;
+    color: #999;
+}
+
+#taskList li.completed.priority-Medium {
+    background-color: #fff3cd;
+    color: #999;
+}
+
+#taskList li.completed.priority-Low {
+    background-color: #d4edda;
+    color: #999;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .todo-input button {
+        flex: 1 1 100%;
+    }
+
+    .task-controls {
+        flex-direction: column;
+    }
+
+    .task-controls input,
+    .task-controls select {
+        flex: 1 1 100%;
+    }
+
+    #taskList li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        margin-top: 10px;
+    }
+}

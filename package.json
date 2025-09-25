@@ -1,0 +1,30 @@
+{
+  "name": "todo-app-testing",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timurenk0/todo-app-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timurenk0/todo-app-testing/issues"
+  },
+  "homepage": "https://github.com/timurenk0/todo-app-testing#readme",
+  "dependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "babel-jest": "^30.1.2",
+    "jest": "^30.1.3",
+    "jest-environment-jsdom": "^30.1.2"
+  }
+}
